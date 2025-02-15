@@ -1,0 +1,297 @@
+/* Firefly Stars Container */
+.fireflies {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Firefly Stars */
+.firefly {
+    position: absolute;
+    bottom: -10px; /* Start from the bottom */
+    width: 5px; /* Star size */
+    height: 5px; /* Star size */
+    background-color: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gold, 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+    animation: rise 5s linear infinite;
+}
+
+/* Firefly Animation Keyframes */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh); /* Move to the top of the screen */
+        opacity: 0; /* Fade out */
+    }
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Silkscreen', cursive;
+    font-size: 16px;
+    background: linear-gradient(to bottom, #000000, #161616); /* Grey to black gradient */
+    color: gold;
+    cursor: none; /* Hide default cursor */
+    overflow-x: hidden; /* Prevent unwanted scrolling */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black; 
+    border-bottom: 2px solid gold;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 360px; /* Updated logo width */
+    height: 340px; /* Updated logo height */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gold;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: 
+        repeating-conic-gradient(from 30deg, #0000 0 120deg, #333333 0 180deg) 
+        64px 36.928px,
+        repeating-conic-gradient(from 30deg, #0a0a0a 0 60deg, #4d4d4d 0 120deg, #333333 0 180deg);
+    background-size: 128px 74px;
+    margin-top: 120px;
+}
+
+/* Banner Text */
+.banner-text {
+    position: absolute;
+    text-align: center;
+    color: gold;
+    z-index: 1;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+.banner-text p {
+    font-size: 18px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+/* About Section */
+#about {
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Games Section */
+#games {
+    padding: 150px 20px;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+h2 {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+/* Game Box */
+.game-box {
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid gold;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+/* GIF Container */
+.gif-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid gold;
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contact Section */
+#contact {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#contact a {
+    color: gold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid gold;
+}
+
+/* Mouse Glow Trail */
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px gold, 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+    animation: fadeOut 0.5s linear forwards;
+}
+
+/* Fade-out animation for smooth glowing effect */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* Hide the default cursor */
+body {
+    cursor: none;
+}
+
+/* Custom Pointer */
+.custom-cursor {
+    position: fixed;
+    width: 20px; /* Pointer size */
+    height: 20px; /* Pointer size */
+    background-color: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 10px gold, 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 1; /* Always visible by default */
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    z-index: 9999;
+}
+
+/* Fade In Effect */
+.custom-cursor.fade-in {
+    opacity: 0.5; /* Adjust opacity for the fade-in effect */
+    transform: translate(-50%, -50%) scale(1.5); /* Optional: Add a scale effect */
+}
+
+/* Ripple Effect */
+.ripple-effect {
+    position: fixed;
+    width: 16px; /* Initial size */
+    height: 16px; /* Initial size */
+    background-color: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: ripple 0.5s ease-out;
+    z-index: 9998;
+}
+
+/* Ripple Animation */
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0;
+    }
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px; /* Adjust height as needed */
+    margin-top: 60px; /* Add some space at the top */
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+}
+
+/* Logo Styling (Glow Effect Removed) */
+.logo-glow {
+    width: 360px; /* Updated logo width */
+    height: 340px; /* Updated logo height */
+}
