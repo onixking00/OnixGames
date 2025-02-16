@@ -164,7 +164,6 @@ nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-    background: #080808;
     padding: 100px 20px;
     text-align: center;
 }
@@ -294,13 +293,24 @@ footer {
         font-size: 16px;
     }
 
+    /* Fix for Navigation Bar */
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        gap: 15px; /* Reduce gap between buttons for mobile */
     }
 
-    .game-box {
-        width: 100%;
+    nav ul li a {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+
+    /* Adjust Header Padding */
+    header {
+        padding: 10px 20px; /* Reduce padding for mobile */
+    }
+
+    /* Adjust Logo Section */
+    .logo-section {
+        height: 250px; /* Adjusted height for mobile */
+        margin-top: 80px; /* Adjusted margin for mobile to avoid overlap */
     }
 
     .logo-glow {
@@ -313,8 +323,8 @@ footer {
         height: 180px; /* Smaller circle for mobile */
     }
 
-    .logo-section {
-        height: 250px; /* Adjusted height for mobile */
-        margin-top: 40px; /* Adjusted margin for mobile */
+    /* Adjust Game Box */
+    .game-box {
+        width: 100%; /* Full width for mobile */
     }
 }
