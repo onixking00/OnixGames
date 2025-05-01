@@ -231,14 +231,14 @@ footer {
     }
 }
 
-/* Logo Section */
 .logo-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Adjusted height */
-    margin-top: 60px; /* Adjusted margin */
+    height: 300px;
+    margin-top: 100px; /* smaller margin now that body has top padding */
 }
+
 
 /* Logo Container */
 .logo-container {
@@ -248,9 +248,9 @@ footer {
 
 /* Logo Styling */
 .logo-glow {
-    width: 180px; /* Medium size */
-    height: 180px; /* Medium size */
-    z-index: 2; /* Ensure logo is above the circle */
+    width: 400px;
+    height: 400px;
+    z-index: 2;
     position: relative;
 }
 
@@ -309,7 +309,7 @@ footer {
 
     /* Adjust Logo Section */
     .logo-section {
-        height: 250px; /* Adjusted height for mobile */
+        height: 350px; /* Adjusted height for mobile */
         margin-top: 80px; /* Adjusted margin for mobile to avoid overlap */
     }
 
@@ -326,5 +326,92 @@ footer {
     /* Adjust Game Box */
     .game-box {
         width: 100%; /* Full width for mobile */
+    }
+}
+
+/* Games Section */
+#games {
+    padding: 150px 20px;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Space between game icon and trailer */
+    margin: 30px auto;
+    max-width: 800px; /* Adjust based on your design */
+}
+
+/* Game Icon Box */
+.game-icon-box {
+    text-align: center;
+}
+
+/* GIF Container */
+.gif-container {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid gold;
+    margin: 0 auto;
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Trailer Container */
+.trailer-container {
+    width: 100%;
+    text-align: center;
+}
+
+.trailer-container h4 {
+    font-size: 24px;
+    color: gold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+/* Video Container */
+.video-container {
+    width: 100%;
+    max-width: 800px; /* Adjust based on your design */
+    margin: 0 auto; /* Center the video */
+    border: 2px solid gold; /* Match the existing design */
+    border-radius: 10px; /* Match the existing design */
+    overflow: hidden; /* Ensure the video stays within the container */
+    background-color: #000; /* Black background for the video container */
+}
+
+/* Video Element */
+.video-container video {
+    width: 100%; /* Make the video responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the video */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        gap: 20px; /* Reduce space between elements on mobile */
+    }
+
+    .gif-container {
+        width: 150px; /* Smaller icon on mobile */
+    }
+
+    .video-container {
+        border-radius: 0; /* Remove border radius for a cleaner look */
+        border-left: none;
+        border-right: none;
     }
 }
