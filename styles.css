@@ -400,6 +400,16 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+    .logo-glow {
+    width: 220px;
+    height: 220px;
+     }
+
+   .glow-circle {
+    width: 250px;
+    height: 250px;
+     }
+    
     .game-container {
         flex-direction: column;
         gap: 20px; /* Reduce space between elements on mobile */
