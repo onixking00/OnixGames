@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Silkscreen', cursive;
+    font-family: 'Silkscreen', sans-serif;
     font-size: 16px;
     background: linear-gradient(to bottom, #000000, #161616);
     color: gold;
