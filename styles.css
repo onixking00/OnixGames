@@ -1,4 +1,20 @@
-/* Firefly Stars Container */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Silkscreen', cursive;
+    font-size: 16px;
+    background: linear-gradient(to bottom, #000000, #161616);
+    color: gold;
+    cursor: none;
+    overflow-x: hidden;
+}
+
+/* Firefly Stars */
 .fireflies {
     position: fixed;
     top: 0;
@@ -10,44 +26,27 @@
     overflow: hidden;
 }
 
-/* Firefly Stars */
 .firefly {
     position: absolute;
-    bottom: -10px; /* Start from the bottom */
-    width: 5px; /* Star size */
-    height: 5px; /* Star size */
+    bottom: -10px;
+    width: 5px;
+    height: 5px;
     background-color: gold;
     border-radius: 50%;
-    box-shadow: 0 0 10px gold, 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.8);
     animation: rise 5s linear infinite;
+    opacity: 0;
 }
 
-/* Firefly Animation Keyframes */
 @keyframes rise {
     0% {
         transform: translateY(0);
         opacity: 1;
     }
     100% {
-        transform: translateY(-100vh); /* Move to the top of the screen */
-        opacity: 0; /* Fade out */
+        transform: translateY(-100vh);
+        opacity: 0;
     }
-}
-
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Silkscreen', cursive;
-    font-size: 16px;
-    background: linear-gradient(to bottom, #000000, #161616); /* Grey to black gradient */
-    color: gold;
-    cursor: none; /* Hide default cursor */
-    overflow-x: hidden; /* Prevent unwanted scrolling */
 }
 
 /* Header */
@@ -61,14 +60,9 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: black; 
+    background: black;
     border-bottom: 2px solid gold;
     z-index: 1000;
-}
-
-.logo img {
-    width: 360px; /* Updated logo width */
-    height: 340px; /* Updated logo height */
 }
 
 nav ul {
@@ -98,14 +92,14 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     background: 
-        repeating-conic-gradient(from 30deg, #0000 0 120deg, #333333 0 180deg) 
-        64px 36.928px,
+        repeating-conic-gradient(from 30deg, #0000 0 120deg, #333333 0 180deg) 64px 36.928px,
         repeating-conic-gradient(from 30deg, #0a0a0a 0 60deg, #4d4d4d 0 120deg, #333333 0 180deg);
     background-size: 128px 74px;
     margin-top: 120px;
+    border-top: 2px solid gold; /* Top border */
+    border-bottom: 2px solid gold; /* Bottom border */
 }
 
-/* Banner Text */
 .banner-text {
     position: absolute;
     text-align: center;
@@ -144,13 +138,6 @@ nav ul li a:hover {
     border-bottom: 2px solid gold;
 }
 
-h2 {
-    font-size: 40px;
-    color: gold;
-    margin-bottom: 20px;
-}
-
-/* Game Box */
 .game-box {
     margin: 30px auto;
     padding: 20px;
@@ -161,7 +148,6 @@ h2 {
     text-align: center;
 }
 
-/* GIF Container */
 .gif-container {
     width: 100%;
     height: auto;
@@ -200,61 +186,31 @@ footer {
     border-top: 2px solid gold;
 }
 
-/* Mouse Glow Trail */
-.trail {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: gold;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: 0 0 10px gold, 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
-    animation: fadeOut 0.5s linear forwards;
-}
-
-/* Fade-out animation for smooth glowing effect */
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-        transform: scale(2);
-    }
-}
-
-/* Hide the default cursor */
-body {
-    cursor: none;
-}
-
-/* Custom Pointer */
+/* Custom Cursor */
 .custom-cursor {
     position: fixed;
-    width: 20px; /* Pointer size */
-    height: 20px; /* Pointer size */
+    width: 20px;
+    height: 20px;
     background-color: gold;
     border-radius: 50%;
     box-shadow: 0 0 10px gold, 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
     pointer-events: none;
     transform: translate(-50%, -50%);
-    opacity: 1; /* Always visible by default */
+    opacity: 1;
     transition: opacity 0.3s ease, transform 0.2s ease;
     z-index: 9999;
 }
 
-/* Fade In Effect */
 .custom-cursor.fade-in {
-    opacity: 0.5; /* Adjust opacity for the fade-in effect */
-    transform: translate(-50%, -50%) scale(1.5); /* Optional: Add a scale effect */
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.5);
 }
 
 /* Ripple Effect */
 .ripple-effect {
     position: fixed;
-    width: 16px; /* Initial size */
-    height: 16px; /* Initial size */
+    width: 16px;
+    height: 16px;
     background-color: gold;
     border-radius: 50%;
     box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
@@ -264,7 +220,6 @@ body {
     z-index: 9998;
 }
 
-/* Ripple Animation */
 @keyframes ripple {
     0% {
         transform: translate(-50%, -50%) scale(1);
@@ -276,22 +231,187 @@ body {
     }
 }
 
-/* Logo Section */
 .logo-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 380px; /* Adjust height as needed */
-    margin-top: 60px; /* Add some space at the top */
+    height: 300px;
+    margin-top: 100px; /* smaller margin now that body has top padding */
 }
+
 
 /* Logo Container */
 .logo-container {
+    position: relative;
     text-align: center;
 }
 
-/* Logo Styling (Glow Effect Removed) */
+/* Logo Styling */
 .logo-glow {
-    width: 360px; /* Updated logo width */
-    height: 340px; /* Updated logo height */
+    width: 400px;
+    height: 400px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Glowing Circle */
+.glow-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px; /* Slightly larger than the logo */
+    height: 220px; /* Slightly larger than the logo */
+    border: 4px solid gold;
+    border-radius: 50%;
+    box-shadow: 0 0 20px gold, 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.5);
+    animation: spin 6s linear infinite; /* Spin animation */
+    z-index: 1; /* Ensure circle is behind the logo */
+}
+
+/* Spin Animation */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .banner-text h1 {
+        font-size: 24px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    /* Fix for Navigation Bar */
+    nav ul {
+        gap: 15px; /* Reduce gap between buttons for mobile */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+
+    /* Adjust Header Padding */
+    header {
+        padding: 10px 20px; /* Reduce padding for mobile */
+    }
+
+    /* Adjust Logo Section */
+    .logo-section {
+        height: 350px; /* Adjusted height for mobile */
+        margin-top: 80px; /* Adjusted margin for mobile to avoid overlap */
+    }
+
+    .logo-glow {
+        width: 140px; /* Smaller logo for mobile */
+        height: 140px; /* Smaller logo for mobile */
+    }
+
+    .glow-circle {
+        width: 180px; /* Smaller circle for mobile */
+        height: 180px; /* Smaller circle for mobile */
+    }
+
+    /* Adjust Game Box */
+    .game-box {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+/* Games Section */
+#games {
+    padding: 150px 20px;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Space between game icon and trailer */
+    margin: 30px auto;
+    max-width: 800px; /* Adjust based on your design */
+}
+
+/* Game Icon Box */
+.game-icon-box {
+    text-align: center;
+}
+
+/* GIF Container */
+.gif-container {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid gold;
+    margin: 0 auto;
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Trailer Container */
+.trailer-container {
+    width: 100%;
+    text-align: center;
+}
+
+.trailer-container h4 {
+    font-size: 24px;
+    color: gold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+/* Video Container */
+.video-container {
+    width: 100%;
+    max-width: 800px; /* Adjust based on your design */
+    margin: 0 auto; /* Center the video */
+    border: 2px solid gold; /* Match the existing design */
+    border-radius: 10px; /* Match the existing design */
+    overflow: hidden; /* Ensure the video stays within the container */
+    background-color: #000; /* Black background for the video container */
+}
+
+/* Video Element */
+.video-container video {
+    width: 100%; /* Make the video responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the video */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        gap: 20px; /* Reduce space between elements on mobile */
+    }
+
+    .gif-container {
+        width: 150px; /* Smaller icon on mobile */
+    }
+
+    .video-container {
+        border-radius: 0; /* Remove border radius for a cleaner look */
+        border-left: none;
+        border-right: none;
+    }
 }
