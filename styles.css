@@ -413,7 +413,10 @@ footer {
     .gif-container {
         width: 150px; /* Smaller icon on mobile */
     }
-
+    
+.banner {
+    margin-top: 20px !important; /* override desktop margin */
+}
     .video-container {
         border-radius: 0; /* Remove border radius for a cleaner look */
         border-left: none;
