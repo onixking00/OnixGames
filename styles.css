@@ -302,26 +302,21 @@ footer {
         font-size: 16px; /* Slightly smaller font size for mobile */
     }
 
-    /* Adjust Header Padding */
-    header {
-        padding: 10px 20px; /* Reduce padding for mobile */
-    }
+/* Adjust Logo Section */
+.logo-section {
+    height: 350px; /* old */
+    margin-top: 80px;
+}
 
-    /* Adjust Logo Section */
-    .logo-section {
-        height: 350px; /* Adjusted height for mobile */
-        margin-top: 80px; /* Adjusted margin for mobile to avoid overlap */
-    }
+.logo-glow {
+    width: 220px;
+    height: 220px;
+}
 
-    .logo-glow {
-        width: 140px; /* Smaller logo for mobile */
-        height: 140px; /* Smaller logo for mobile */
-    }
-
-    .glow-circle {
-        width: 180px; /* Smaller circle for mobile */
-        height: 180px; /* Smaller circle for mobile */
-    }
+.glow-circle {
+    width: 250px;
+    height: 250px;
+}
 
     /* Adjust Game Box */
     .game-box {
