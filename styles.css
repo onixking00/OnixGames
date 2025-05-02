@@ -304,8 +304,8 @@ footer {
 
 /* Adjust Logo Section */
 .logo-section {
-    height: 400px; /* old */
-    margin-top: 80px;
+    height: 300px; /* old */
+    margin-top: 30px;
 }
 
 .logo-glow {
@@ -396,13 +396,13 @@ footer {
 /* Mobile Styles */
 @media (max-width: 768px) {
     .logo-glow {
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
      }
 
    .glow-circle {
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 320px;
      }
     
     .game-container {
