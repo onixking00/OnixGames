@@ -149,15 +149,15 @@ nav ul li a:hover {
 }
 
 .image-container {
-    width: 100%;
+    width: 50%;
     height: auto;
     overflow: hidden;
     border-radius: 10px;
     border: 2px solid gold;
 }
 
-.gimage-container img {
-    width: 100%;
+.image-container img {
+    width: 50%;
     height: auto;
     display: block;
 }
