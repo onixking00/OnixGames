@@ -148,7 +148,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.gif-container {
+.image-container {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -156,7 +156,7 @@ nav ul li a:hover {
     border: 2px solid gold;
 }
 
-.gif-container img {
+.gimage-container img {
     width: 100%;
     height: auto;
     display: block;
