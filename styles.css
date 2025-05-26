@@ -149,17 +149,11 @@ nav ul li a:hover {
 }
 
 .image-container {
-    width: 400px;
-    height: 400px;
-    position: relative;
+    width: 100%;
+    height: auto;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 2px solid gold;
 }
 
 .image-container img {
@@ -353,7 +347,7 @@ footer {
 }
 
 /* GIF Container */
-.gif-container {
+.image-container {
     width: 300px; /* Adjust size as needed */
     height: auto;
     overflow: hidden;
@@ -362,7 +356,7 @@ footer {
     margin: 0 auto;
 }
 
-.gif-container img {
+.image-container img {
     width: 100%;
     height: auto;
     display: block;
@@ -416,7 +410,7 @@ footer {
         gap: 20px; /* Reduce space between elements on mobile */
     }
 
-    .gif-container {
+    .image-container {
         width: 150px; /* Smaller icon on mobile */
     }
     
