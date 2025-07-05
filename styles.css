@@ -423,3 +423,22 @@ footer {
         border-right: none;
     }
 }
+
+.play-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #34a853; /* Google Play green */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.play-button:hover {
+    background-color: #2c8a3e;
+    transform: scale(1.05);
+}
