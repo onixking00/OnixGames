@@ -1,3 +1,7 @@
+/* ---------------------------------------------------------- */
+/* 🔱 AURIGONIX STUDIOS - RETRO-GOLDEN THEME STYLES */
+/* ---------------------------------------------------------- */
+
 /* General Styles */
 * {
     margin: 0;
@@ -8,67 +12,71 @@
 body {
     font-family: 'Silkscreen', sans-serif;
     font-size: 16px;
-    background: linear-gradient(to bottom, #000000, #161616);
+    background: radial-gradient(circle at top, #111 0%, #000 80%);
     color: gold;
     cursor: none;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
+/* Smooth Fade-in Animation for Sections */
+section {
+    animation: fadeInUp 1.2s ease both;
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------------- */
 /* Firefly Stars */
+/* ---------------------------------------------------------- */
 .fireflies {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     pointer-events: none;
     z-index: -1;
     overflow: hidden;
+    filter: blur(0.5px);
 }
 
 .firefly {
     position: absolute;
-    bottom: -10px;
-    width: 5px;
-    height: 5px;
+    width: 5px; height: 5px;
     background-color: gold;
     border-radius: 50%;
-    box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.8);
-    animation: rise 5s linear infinite;
+    box-shadow: 0 0 8px gold, 0 0 16px rgba(255, 215, 0, 0.8);
+    animation: rise 6s linear infinite;
     opacity: 0;
 }
-
 @keyframes rise {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
 }
 
+/* ---------------------------------------------------------- */
 /* Header */
+/* ---------------------------------------------------------- */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 15px 50px;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: black;
+    background: rgba(0, 0, 0, 0.85);
     border-bottom: 2px solid gold;
+    backdrop-filter: blur(6px);
     z-index: 1000;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 nav ul li a {
@@ -76,369 +84,248 @@ nav ul li a {
     color: gold;
     font-size: 18px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: 0.3s;
+    position: relative;
 }
 
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
 nav ul li a:hover {
     color: white;
 }
 
-/* Banner */
+/* ---------------------------------------------------------- */
+/* Banner Section */
+/* ---------------------------------------------------------- */
 .banner {
-    position: relative;
     width: 100%;
-    height: 300px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: 
-        repeating-conic-gradient(from 30deg, #0000 0 120deg, #333333 0 180deg) 64px 36.928px,
-        repeating-conic-gradient(from 30deg, #0a0a0a 0 60deg, #4d4d4d 0 120deg, #333333 0 180deg);
-    background-size: 128px 74px;
+    background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+    background-image:
+        repeating-conic-gradient(from 30deg, #0000 0 120deg, #2a2a2a 0 180deg),
+        repeating-conic-gradient(from 30deg, #1a1a1a 0 60deg, #444 0 120deg);
+    background-blend-mode: overlay;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
     margin-top: 120px;
-    border-top: 2px solid gold; /* Top border */
-    border-bottom: 2px solid gold; /* Bottom border */
 }
 
 .banner-text {
-    position: absolute;
     text-align: center;
     color: gold;
-    z-index: 1;
+    text-shadow: 0 0 10px gold, 0 0 30px rgba(255, 215, 0, 0.7);
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+    0%, 100% { text-shadow: 0 0 10px gold, 0 0 25px rgba(255, 215, 0, 0.7); }
+    50% { text-shadow: 0 0 25px gold, 0 0 50px rgba(255, 215, 0, 0.9); }
 }
 
-.banner-text h1 {
-    font-size: 36px;
-    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+/* ---------------------------------------------------------- */
+/* Logo Section */
+/* ---------------------------------------------------------- */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    margin-top: 100px;
 }
 
-.banner-text p {
-    font-size: 18px;
-    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+.logo-container {
+    position: relative;
+    text-align: center;
 }
 
+.logo-glow {
+    width: 420px;
+    height: 420px;
+    filter: drop-shadow(0 0 20px gold) drop-shadow(0 0 40px rgba(255, 215, 0, 0.7));
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+.logo-glow:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 40px gold) drop-shadow(0 0 80px rgba(255, 215, 0, 0.9));
+}
+
+/* ---------------------------------------------------------- */
 /* About Section */
+/* ---------------------------------------------------------- */
 #about {
     padding: 100px 20px;
     text-align: center;
     border-bottom: 2px solid gold;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    line-height: 1.6;
+#about h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px gold, 0 0 20px rgba(255, 215, 0, 0.6);
 }
 
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+/* ---------------------------------------------------------- */
 /* Games Section */
+/* ---------------------------------------------------------- */
 #games {
     padding: 150px 20px;
     text-align: center;
     border-bottom: 2px solid gold;
 }
 
-.game-box {
-    margin: 30px auto;
-    padding: 20px;
-    background: rgba(255, 215, 0, 0.1);
-    border: 2px solid gold;
-    border-radius: 10px;
-    width: 300px;
+#games h2 {
+    font-size: 28px;
+    text-shadow: 0 0 8px gold, 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.game-icon-box {
     text-align: center;
+    transition: transform 0.4s ease;
+}
+.game-icon-box:hover {
+    transform: translateY(-10px);
 }
 
-.image-container {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+.gif-container {
+    width: 300px;
     border-radius: 10px;
     border: 2px solid gold;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
 }
 
-.image-container img {
+.gif-container img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+.coming-soon {
+    color: #ffcc33;
+    font-size: 14px;
+    margin-top: 8px;
+    text-shadow: 0 0 10px gold;
+}
+
+/* ---------------------------------------------------------- */
 /* Contact Section */
+/* ---------------------------------------------------------- */
 #contact {
     padding: 100px 20px;
     text-align: center;
 }
-
 #contact a {
     color: gold;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
-
 #contact a:hover {
     color: white;
+    text-shadow: 0 0 8px gold;
 }
 
+/* ---------------------------------------------------------- */
 /* Footer */
+/* ---------------------------------------------------------- */
 footer {
-    background: #111;
-    padding: 20px;
+    background: #0a0a0a;
+    padding: 25px;
     text-align: center;
     border-top: 2px solid gold;
+    font-size: 14px;
+    color: #ffdf70;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
 }
 
-/* Custom Cursor */
+/* ---------------------------------------------------------- */
+/* Cursor and Ripple Effects */
+/* ---------------------------------------------------------- */
 .custom-cursor {
     position: fixed;
-    width: 20px;
-    height: 20px;
+    width: 20px; height: 20px;
     background-color: gold;
     border-radius: 50%;
-    box-shadow: 0 0 10px gold, 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 15px gold, 0 0 30px rgba(255, 215, 0, 0.8);
     pointer-events: none;
     transform: translate(-50%, -50%);
     opacity: 1;
-    transition: opacity 0.3s ease, transform 0.2s ease;
+    transition: opacity 0.3s, transform 0.2s;
     z-index: 9999;
 }
-
 .custom-cursor.fade-in {
     opacity: 0.5;
     transform: translate(-50%, -50%) scale(1.5);
 }
 
-/* Ripple Effect */
 .ripple-effect {
     position: fixed;
-    width: 16px;
-    height: 16px;
+    width: 16px; height: 16px;
     background-color: gold;
     border-radius: 50%;
-    box-shadow: 0 0 5px gold, 0 0 10px rgba(255, 215, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 5px gold, 0 0 15px rgba(255, 215, 0, 0.8);
     pointer-events: none;
     transform: translate(-50%, -50%);
     animation: ripple 0.5s ease-out;
     z-index: 9998;
 }
-
 @keyframes ripple {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(5);
-        opacity: 0;
-    }
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(5); opacity: 0; }
 }
 
-.logo-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    margin-top: 100px; /* smaller margin now that body has top padding */
-}
-
-
-/* Logo Container */
-.logo-container {
-    position: relative;
-    text-align: center;
-}
-
-/* Logo Styling */
-.logo-glow {
-    width: 400px;
-    height: 400px;
-    z-index: 2;
-    position: relative;
-}
-
-/* Glowing Circle */
-.glow-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 220px; /* Slightly larger than the logo */
-    height: 220px; /* Slightly larger than the logo */
-    border: 4px solid gold;
-    border-radius: 50%;
-    box-shadow: 0 0 20px gold, 0 0 40px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.5);
-    animation: spin 6s linear infinite; /* Spin animation */
-    z-index: 1; /* Ensure circle is behind the logo */
-}
-
-/* Spin Animation */
-@keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-/* Responsive Design */
+/* ---------------------------------------------------------- */
+/* Mobile Optimization */
+/* ---------------------------------------------------------- */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
+    body { font-size: 14px; }
 
-    .banner-text h1 {
-        font-size: 24px;
-    }
+    header { padding: 10px 20px; }
+    nav ul { gap: 15px; }
+    nav ul li a { font-size: 16px; }
 
-    .banner-text p {
-        font-size: 16px;
-    }
+    .banner-text h1 { font-size: 22px; }
+    .banner-text p { font-size: 14px; }
 
-    /* Fix for Navigation Bar */
-    nav ul {
-        gap: 15px; /* Reduce gap between buttons for mobile */
-    }
+    .logo-glow { width: 180px; height: 180px; }
 
-    nav ul li a {
-        font-size: 16px; /* Slightly smaller font size for mobile */
-    }
+    .about-content { padding: 15px; }
 
-/* Adjust Logo Section */
-.logo-section {
-    height: 500px; /* old */
-    margin-top: 30px;
-}
+    .gif-container { width: 200px; }
 
-.logo-glow {
-    width: 220px;
-    height: 220px;
-}
-
-.glow-circle {
-    width: 250px;
-    height: 250px;
-}
-
-    /* Adjust Game Box */
-    .game-box {
-        width: 100%; /* Full width for mobile */
-    }
-}
-
-/* Games Section */
-#games {
-    padding: 150px 20px;
-    text-align: center;
-    border-bottom: 2px solid gold;
-}
-
-/* Game Container */
-.game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px; /* Space between game icon and trailer */
-    margin: 30px auto;
-    max-width: 800px; /* Adjust based on your design */
-}
-
-/* Game Icon Box */
-.game-icon-box {
-    text-align: center;
-}
-
-/* GIF Container */
-.image-container {
-    width: 300px; /* Adjust size as needed */
-    height: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    border: 2px solid gold;
-    margin: 0 auto;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Trailer Container */
-.trailer-container {
-    width: 100%;
-    text-align: center;
-}
-
-.trailer-container h4 {
-    font-size: 24px;
-    color: gold;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
-}
-
-/* Video Container */
-.video-container {
-    width: 100%;
-    max-width: 800px; /* Adjust based on your design */
-    margin: 0 auto; /* Center the video */
-    border: 2px solid gold; /* Match the existing design */
-    border-radius: 10px; /* Match the existing design */
-    overflow: hidden; /* Ensure the video stays within the container */
-    background-color: #000; /* Black background for the video container */
-}
-
-/* Video Element */
-.video-container video {
-    width: 100%; /* Make the video responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below the video */
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .logo-glow {
-    width: 300px;
-    height: 300px;
-     }
-
-   .glow-circle {
-    width: 320px;
-    height: 320px;
-     }
-    
-    .game-container {
-        flex-direction: column;
-        gap: 20px; /* Reduce space between elements on mobile */
-    }
-
-    .image-container {
-        width: 150px; /* Smaller icon on mobile */
-    }
-    
-.banner {
-    margin-top: 20px !important; /* override desktop margin */
-}
-    .video-container {
-        border-radius: 0; /* Remove border radius for a cleaner look */
-        border-left: none;
-        border-right: none;
-    }
-}
-
-.play-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #34a853; /* Google Play green */
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: 'Silkscreen', sans-serif;
-    font-size: 14px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.play-button:hover {
-    background-color: #2c8a3e;
-    transform: scale(1.05);
+    footer { font-size: 12px; }
 }
