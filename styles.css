@@ -227,6 +227,10 @@ nav ul li a:hover {
     border: 2px solid gold;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* ✅ Centers the container itself */
 }
 
 .gif-container img {
@@ -443,5 +447,6 @@ footer {
         gap: 40px;
     }
 }
+
 
 
