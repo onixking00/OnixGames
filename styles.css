@@ -309,23 +309,106 @@ footer {
 }
 
 /* ---------------------------------------------------------- */
-/* Mobile Optimization */
+/* 🌐 Improved Mobile Optimization */
 /* ---------------------------------------------------------- */
-@media (max-width: 768px) {
-    body { font-size: 14px; }
+@media (max-width: 1024px) {
+    header {
+        padding: 12px 25px;
+    }
+    nav ul {
+        gap: 20px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
 
-    header { padding: 10px 20px; }
-    nav ul { gap: 15px; }
-    nav ul li a { font-size: 16px; }
+    .banner {
+        height: 300px;
+        margin-top: 100px;
+    }
+    .banner-text h1 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    .banner-text p {
+        font-size: 14px;
+    }
 
-    .banner-text h1 { font-size: 22px; }
-    .banner-text p { font-size: 14px; }
+    .logo-section {
+        height: auto;
+        margin-top: 80px;
+    }
+    .logo-glow {
+        width: 300px;
+        height: auto;
+    }
 
-    .logo-glow { width: 180px; height: 180px; }
+    #about {
+        padding: 70px 15px;
+    }
+    .about-content {
+        padding: 20px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
 
-    .about-content { padding: 15px; }
+    #games {
+        padding: 100px 10px;
+    }
+    .game-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .gif-container {
+        width: 260px;
+    }
+    .coming-soon {
+        font-size: 13px;
+    }
 
-    .gif-container { width: 200px; }
-
-    footer { font-size: 12px; }
+    #contact {
+        padding: 80px 10px;
+    }
+    footer {
+        font-size: 13px;
+        padding: 20px;
+    }
 }
+
+/* 📱 Small Phones (under 600px) */
+@media (max-width: 600px) {
+    .logo-glow {
+        width: 85vw;
+        height: auto;
+        max-width: 380px;
+    }
+
+    .banner-text h1 {
+        font-size: 20px;
+    }
+    .banner-text p {
+        font-size: 13px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .gif-container {
+        width: 220px;
+    }
+
+    .about-content {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+
